@@ -34,6 +34,11 @@ internal class Calculator<T> where T : INumber<T>
     }
     public T Division()
     {
+        dynamic number2= Number2;
+        if (number2 == 0)
+        {
+            throw new DivideByZeroException("0-a bolme yoxdu");
+        }
         return Number1 / Number2;
     }
     }
